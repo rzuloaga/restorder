@@ -1,3 +1,12 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+###< symfony/framework-bundle ###
+
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -8,6 +17,7 @@
 /app/spool/*
 
 # Cache, session files and logs (Symfony3)
+/var/
 /var/cache/*
 /var/logs/*
 /var/sessions/*
