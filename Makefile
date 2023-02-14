@@ -24,11 +24,25 @@ echo-help:
 help:
 	@make echo-info text="Ayuda:"
 	@echo ""
-	@make echo-help title="Información sobre Symfony, ejecutar:" cmd="		info"
+	@make echo-help title="Para saber más sobre la versión de Symfony, ejecutar:" 		cmd="	about"
+	@make echo-help title="Para saber qué se puede lanzar desde Symfony CLI, ejecutar:" cmd="	cli-help"
+	@make echo-help title="Lanzar tests unitarios, ejecutar:" 							cmd="	unit-test"
+	@make echo-help title="Lanzar tests de aceptación BDD, ejecutar:" 					cmd="	behat-test"
+	@make echo-help title="Lanzar todos los tests, ejecutar:" 							cmd="	test"
 
-info:
-	@php bin/console about
+about: CMD=about
+
+cli-help about:
+	@php bin/console $(CMD)
 
 # ⚒ PHPUnit Testing
-test:
+unit-test:
 	bin/phpunit
+
+# 🥒 Behat Acceptance tests
+behat-test:
+	vendor/bin/behat 
+
+# Run all tests
+test:
+	@make unit-test behat-test
