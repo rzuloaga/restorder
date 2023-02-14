@@ -1,0 +1,11 @@
+{
+        "recommendations": [
+                "junstyle.php-cs-fixer",
+                "eamodio.gitlens",
+                "bmewburn.vscode-intelephense-client",
+                "alefragnani.project-manager",
+                "gruntfuggly.todo-tree",
+                "sleistner.vscode-fileutils",
+                "esbenp.prettier-vscode",
+        ]
+}

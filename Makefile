@@ -28,3 +28,7 @@ help:
 
 info:
 	@php bin/console about
+
+# ⚒ PHPUnit Testing
+test:
+	bin/phpunit
